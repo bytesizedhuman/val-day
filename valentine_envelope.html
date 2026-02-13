@@ -23,6 +23,25 @@ body {
   justify-content: center;
 }
 
+/* Title text */
+.title {
+  position: absolute;
+  top: 8vh;
+  width: 100%;
+  text-align: center;
+  font-size: clamp(20px, 5vw, 36px);
+  font-weight: 700;
+  color: #c2255c;
+  text-shadow: 0 0 12px rgba(255, 120, 160, 0.6);
+  animation: titleGlow 2.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes titleGlow {
+  0%,100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
 /* Floating hearts background */
 .heart {
   position: absolute;
@@ -60,7 +79,7 @@ body {
   overflow: hidden;
 }
 
-/* Glow effect */
+/* Shimmer */
 .envelope::before {
   content: "";
   position: absolute;
@@ -80,7 +99,7 @@ body {
   100% { transform: translateX(150%); }
 }
 
-/* Soft pulse glow */
+/* Glow */
 .envelope::after {
   content: "";
   position: absolute;
@@ -184,6 +203,8 @@ body {
 
 <body>
 
+<div class="title">You make me love Valentine's Day 💗</div>
+
 <div class="stage" id="stage">
   <div class="envelope">
     <div class="flap"></div>
@@ -191,12 +212,10 @@ body {
     <div class="letter">
       Happy Valentine’s Day, my love 💖<br><br>
       Being with you makes ordinary days feel magical. Your smile,
-      your kindness, and the warmth you bring into my life mean more
+      and the warmth you bring into my life mean more
       to me than words can ever fully say.<br><br>
-      Thank you for being my comfort, my happiness, and my favorite
-      person. I’m so grateful for every laugh we share and every
-      moment we create together.<br><br>
-      Today and always — you are deeply loved. 💕
+      Thank you for coming into my life. I’m so grateful for every laugh, hugs and kisses we share.<br><br>
+      Today and always - you are deeply loved. 💕
     </div>
   </div>
 
@@ -272,3 +291,4 @@ function fireworksBurst() {
 
 </body>
 </html>
+
